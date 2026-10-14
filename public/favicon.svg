@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <rect width="64" height="64" rx="8" fill="#292625"/>
+  <text x="32" y="26" font-family="Georgia, serif" font-size="16" font-weight="600" fill="#B69A60" text-anchor="middle" dominant-baseline="middle">GS</text>
+  <line x1="14" y1="34" x2="50" y2="34" stroke="#B69A60" stroke-width="0.8"/>
+  <text x="32" y="46" font-family="Georgia, serif" font-size="5.5" fill="#FAF7F3" text-anchor="middle" dominant-baseline="middle" letter-spacing="1.5">ESTÉTICA</text>
+</svg>

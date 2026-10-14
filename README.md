@@ -1,74 +1,127 @@
-# GS Estética Avançada — Gabrielly Sampaio
+# GS Estética Avançada — Site Premium
 
-Site institucional e editorial de alto padrão para a **GS Estética Avançada**, desenvolvido com identidade visual refinada, foco em UX/UI de luxo e total respeito às diretrizes éticas e de conformidade da clínica.
-
----
-
-## 🎨 Identidade & Direção Visual
-
-- **Paleta de Cores de Luxo**:
-  - Marfim (`#FAF7F3`)
-  - Branco Quente (`#FFFCF9`)
-  - Rosa Nude (`#EAD7D3`)
-  - Malva Suave (`#C6AAB9`)
-  - Dourado Discreto (`#B69A60`)
-  - Grafite (`#292625`)
-- **Tipografia Editorial**:
-  - *Cormorant Garamond*: Títulos editoriais refinados e elegantes.
-  - *Inter* & *Manrope*: Textos de apoio, clareza funcional e botões modernos.
-- **Microinterações**: Transições suaves, sombras sutis, lightbox de alta definição e accordions acessíveis.
+Site completo para a **GS Estética Avançada**, desenvolvido com **React + Vite + TypeScript**.
 
 ---
 
-## 🚀 Como Executar Localmente
+## Como executar localmente
 
-Como o projeto é construído em arquitetura estática pura e moderna (Zero-Config), você pode executá-lo com qualquer servidor local:
+### Pré-requisitos
+- **Node.js** v18 ou superior → [nodejs.org](https://nodejs.org)
+- **npm** (incluído com o Node.js)
 
-### Opção 1: Abrir diretamente no Navegador
-Basta dar um duplo clique no arquivo:
-```
-index.html
-```
+### Passos
 
-### Opção 2: Com VS Code (Live Server)
-1. Abra a pasta `clinica 4` no Visual Studio Code.
-2. Clique com o botão direito no `index.html` e selecione **"Open with Live Server"**.
-
-### Opção 3: Via Terminal (Node / Python)
 ```bash
-# Com npx serve:
-npx serve .
+# 1. Abra o terminal na pasta do projeto
+cd "c:\Users\Win11\Downloads\clinica 4"
 
-# Ou com Python 3:
-python -m http.server 3000
+# 2. Instale as dependências (apenas na primeira vez)
+npm install
+
+# 3. Inicie o servidor de desenvolvimento
+npm run dev
 ```
-Em seguida, acesse no navegador: `http://localhost:3000`
+
+O site abrirá automaticamente em `http://localhost:3000`
 
 ---
 
-## ⚙️ Arquivo de Configuração Central
+## Estrutura de arquivos
 
-Todas as informações da clínica, status de confirmação e tratamentos estão centralizados em:
 ```
-src/config/business.ts
+clinica 4/
+├── public/
+│   ├── favicon.svg
+│   └── images/
+│       ├── LEIA-ME.md          ← instruções de imagens
+│       ├── gabrielly-sampaio.png
+│       ├── gabrielly-laser.png
+│       ├── resultado-corporal-1.png
+│       ├── resultado-antes-depois.png
+│       └── resultado-corporal-2.png
+├── src/
+│   ├── config/
+│   │   └── business.ts         ← ⭐ ARQUIVO DE CONFIGURAÇÃO CENTRAL
+│   ├── components/
+│   │   ├── Header.tsx / .css
+│   │   ├── Hero.tsx / .css
+│   │   ├── About.tsx / .css
+│   │   ├── Treatments.tsx / .css
+│   │   ├── Technology.tsx / .css
+│   │   ├── Gallery.tsx / .css
+│   │   ├── Results.tsx / .css
+│   │   ├── HowItWorks.tsx / .css
+│   │   ├── FAQ.tsx / .css
+│   │   ├── Contact.tsx / .css
+│   │   ├── FinalCTA.tsx / .css
+│   │   ├── Footer.tsx / .css
+│   │   ├── Lightbox.tsx
+│   │   └── WhatsAppFloat.tsx
+│   ├── App.tsx
+│   ├── main.tsx
+│   └── index.css
+├── index.html
+├── package.json
+├── vite.config.ts
+└── tsconfig.json
 ```
-
-Neste arquivo você pode alterar facilmente:
-- Nome da clínica e da profissional
-- Número oficial do WhatsApp
-- Endereço físico e link do Google Maps
-- Horários de funcionamento
-- Lista de tratamentos e descrições
-
-> **Nota de Integridade:** As informações de WhatsApp, endereço e horário físico estão intencionalmente sinalizadas como `"pending"` na interface, apresentando avisos educados de que serão liberados em breve, sem exibir mapas fictícios ou links quebrados.
 
 ---
 
-## 📋 Informações Pendentes para Finalizar a Publicação
+## ⭐ Como atualizar os dados da clínica
 
-Para colocar o site em produção definitiva com 100% dos dados completos, basta fornecer:
+Edite o arquivo `src/config/business.ts`:
 
-1. **WhatsApp Oficial**: Número com DDD para habilitar o link direto `https://wa.me/55...`.
-2. **Endereço Completo**: Rua, número, bairro, cidade, CEP e link oficial do Google Maps.
-3. **Horários de Funcionamento**: Dias de atendimento e faixa de horários (ou indicação formal de plantão de atendimento).
-4. **Logomarca Definitiva (Opcional)**: Caso possua o arquivo vetorial `.svg` da logo oficial da clínica, basta substituir `public/images/logo.svg`.
+```typescript
+// Trocar PENDING pelo número real (apenas dígitos, ex: '5511999999999')
+whatsapp: '55XXXXXXXXXXX',
+
+// Trocar PENDING pelo endereço real
+address: 'Rua Exemplo, 123 — Bairro',
+city: 'Cidade',
+state: 'UF',
+
+// Link do Google Maps
+addressMapUrl: 'https://maps.google.com/...',
+
+// Horários (exemplo)
+businessHours: [
+  { days: 'Segunda a Sexta', hours: '09h – 19h' },
+  { days: 'Sábado', hours: '09h – 14h' },
+],
+```
+
+---
+
+## O que ainda precisa ser fornecido
+
+| Item | Status |
+|---|---|
+| Número de WhatsApp | ⏳ Pendente |
+| Endereço completo | ⏳ Pendente |
+| Horários de funcionamento | ⏳ Pendente |
+| Fotografias originais em alta resolução | ⏳ Copiar para `/public/images/` |
+| Informações profissionais (formação, especializações) | ⏳ Pendente |
+| Depoimentos de clientes autorizados | ⏳ Pendente |
+| CNPJ e dados legais | ⏳ Pendente (quando houver) |
+
+---
+
+## Build para produção
+
+```bash
+npm run build
+```
+
+Os arquivos serão gerados em `dist/`. Faça o upload desta pasta para o seu servidor ou hosting.
+
+---
+
+## Tecnologias utilizadas
+
+- **React 18** + **TypeScript**
+- **Vite 6** (bundler)
+- **CSS puro** (sem frameworks pesados)
+- **Google Fonts**: Cormorant Garamond + Manrope
+- Zero dependências de UI desnecessárias

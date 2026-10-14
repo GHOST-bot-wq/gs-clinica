@@ -1,0 +1,216 @@
+.about { background-color: var(--warm-white); }
+
+.about__inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: center;
+}
+
+/* ── Coluna imagem ── */
+.about__image-col {
+  position: relative;
+  opacity: 0;
+  transform: translateX(-30px);
+  transition: opacity 0.9s ease, transform 0.9s ease;
+}
+
+.about.is-visible .about__image-col {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.about__image-frame {
+  position: relative;
+  aspect-ratio: 3/4;
+  overflow: hidden;
+  background: var(--nude-rose);
+}
+
+.about__image-frame--empty {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.about__image-frame--empty::after {
+  content: 'Fotografia em breve';
+  font-family: var(--font-serif);
+  font-size: 1rem;
+  color: var(--mauve);
+  font-style: italic;
+}
+
+.about__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  transition: transform 0.8s ease;
+}
+
+.about__image-frame:hover .about__image {
+  transform: scale(1.03);
+}
+
+/* Detalhe decorativo */
+.about__image-accent {
+  position: absolute;
+  bottom: -16px;
+  right: -16px;
+  width: 80px;
+  height: 80px;
+  border-right: 1px solid var(--gold);
+  border-bottom: 1px solid var(--gold);
+  pointer-events: none;
+}
+
+/* Card flutuante */
+.about__floating-card {
+  position: absolute;
+  bottom: 48px;
+  left: -32px;
+  background: var(--ivory);
+  border: 1px solid var(--border-light);
+  padding: 20px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  min-width: 160px;
+  box-shadow: 0 8px 32px rgba(41,38,37,0.06);
+}
+
+.about__floating-icon {
+  color: var(--gold);
+  font-size: 1.1rem;
+}
+
+.about__floating-text {
+  font-family: var(--font-serif);
+  font-size: 0.95rem;
+  font-weight: 400;
+  color: var(--graphite);
+  line-height: 1.4;
+}
+
+/* ── Coluna conteúdo ── */
+.about__content {
+  opacity: 0;
+  transform: translateX(30px);
+  transition: opacity 0.9s ease 0.2s, transform 0.9s ease 0.2s;
+}
+
+.about.is-visible .about__content {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.about__eyebrow { display: block; margin-bottom: 16px; }
+
+.about__title {
+  font-size: clamp(2.2rem, 3.5vw, 3.4rem);
+  font-weight: 300;
+  color: var(--graphite);
+  line-height: 1.15;
+  margin-bottom: 32px;
+}
+
+.about__title em { font-style: italic; color: var(--gold); }
+
+.about__body {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-bottom: 32px;
+}
+
+.about__body p {
+  font-size: 0.95rem;
+  color: var(--graphite-muted);
+  line-height: 1.8;
+}
+
+.about__placeholder em {
+  font-style: italic;
+  color: var(--mauve);
+  font-size: 0.85rem;
+  border-left: 2px solid var(--mauve);
+  padding-left: 10px;
+}
+
+.about__values {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin-bottom: 40px;
+}
+
+.about__value-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+}
+
+.about__value-dot {
+  width: 4px;
+  height: 4px;
+  background: var(--gold);
+  border-radius: 50%;
+  margin-top: 8px;
+  flex-shrink: 0;
+}
+
+.about__value-item strong {
+  display: block;
+  font-family: var(--font-sans);
+  font-size: 0.82rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  color: var(--graphite);
+  text-transform: uppercase;
+  margin-bottom: 2px;
+}
+
+.about__value-item span {
+  font-size: 0.82rem;
+  color: var(--graphite-muted);
+}
+
+/* ── Responsivo ── */
+@media (max-width: 900px) {
+  .about__inner {
+    grid-template-columns: 1fr;
+    gap: 48px;
+  }
+
+  .about__image-col {
+    transform: translateX(0);
+    max-width: 480px;
+    margin: 0 auto;
+    width: 100%;
+  }
+
+  .about.is-visible .about__image-col {
+    transform: translateX(0);
+  }
+
+  .about__content {
+    transform: translateX(0);
+  }
+
+  .about.is-visible .about__content {
+    transform: translateX(0);
+  }
+
+  .about__floating-card {
+    left: -16px;
+    bottom: 32px;
+  }
+
+  .about__image-accent {
+    right: -8px;
+    bottom: -8px;
+    width: 48px;
+    height: 48px;
+  }
+}

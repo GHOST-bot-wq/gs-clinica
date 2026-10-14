@@ -1,0 +1,357 @@
+/* ============================================================
+   GS Estética Avançada — Global Styles
+   Paleta: Marfim #FAF7F3 | Rosa nude #EAD7D3 | Malva #C6AAB9
+           Dourado #B69A60 | Grafite #292625
+   Tipografia: Cormorant Garamond (serifa) + Manrope (sans)
+   ============================================================ */
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  /* Cores */
+  --ivory: #FAF7F3;
+  --warm-white: #FFFCF9;
+  --nude-rose: #EAD7D3;
+  --mauve: #C6AAB9;
+  --gold: #B69A60;
+  --graphite: #292625;
+  --graphite-light: #3d3a39;
+  --graphite-muted: #5c5856;
+  --border-light: rgba(182, 154, 96, 0.15);
+  --border-nude: rgba(198, 170, 185, 0.25);
+
+  /* Tipografia */
+  --font-serif: 'Cormorant Garamond', Georgia, serif;
+  --font-sans: 'Manrope', system-ui, sans-serif;
+
+  /* Espaçamentos */
+  --section-padding: clamp(80px, 10vw, 140px);
+  --container-max: 1280px;
+  --container-padding: clamp(24px, 5vw, 80px);
+
+  /* Transições */
+  --transition-smooth: 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  --transition-fast: 0.2s ease;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--ivory);
+  color: var(--graphite);
+  line-height: 1.65;
+  overflow-x: hidden;
+}
+
+/* ── Scrollbar refinada ── */
+::-webkit-scrollbar { width: 5px; }
+::-webkit-scrollbar-track { background: var(--ivory); }
+::-webkit-scrollbar-thumb { background: var(--mauve); border-radius: 10px; }
+
+/* ── Seleção de texto ── */
+::selection { background: var(--nude-rose); color: var(--graphite); }
+
+/* ── Foco acessível ── */
+:focus-visible {
+  outline: 2px solid var(--gold);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+/* ── Tipografia base ── */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-serif);
+  font-weight: 400;
+  line-height: 1.15;
+  letter-spacing: -0.01em;
+}
+
+p { line-height: 1.7; }
+
+a {
+  color: inherit;
+  text-decoration: none;
+  transition: color var(--transition-fast);
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  background: none;
+  font-family: var(--font-sans);
+}
+
+/* ── Container utilitário ── */
+.container {
+  width: 100%;
+  max-width: var(--container-max);
+  margin: 0 auto;
+  padding: 0 var(--container-padding);
+}
+
+/* ── Linha decorativa dourada ── */
+.gold-line {
+  display: block;
+  width: 40px;
+  height: 1px;
+  background: var(--gold);
+  margin-bottom: 20px;
+}
+
+/* ── Tag editorial ── */
+.eyebrow {
+  font-family: var(--font-sans);
+  font-size: 0.7rem;
+  font-weight: 500;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--gold);
+}
+
+/* ── Botões ── */
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 14px 32px;
+  background: var(--graphite);
+  color: var(--ivory);
+  font-family: var(--font-sans);
+  font-size: 0.78rem;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  border: 1px solid var(--graphite);
+  transition: background var(--transition-smooth), color var(--transition-smooth), border-color var(--transition-smooth);
+  cursor: pointer;
+}
+
+.btn-primary:hover {
+  background: var(--gold);
+  border-color: var(--gold);
+  color: var(--warm-white);
+}
+
+.btn-primary:disabled,
+.btn-primary[aria-disabled="true"] {
+  opacity: 0.45;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+.btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 13px 31px;
+  background: transparent;
+  color: var(--graphite);
+  font-family: var(--font-sans);
+  font-size: 0.78rem;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  border: 1px solid var(--graphite);
+  transition: all var(--transition-smooth);
+  cursor: pointer;
+}
+
+.btn-secondary:hover {
+  background: var(--nude-rose);
+  border-color: var(--nude-rose);
+}
+
+.btn-outline-gold {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 13px 31px;
+  background: transparent;
+  color: var(--gold);
+  font-family: var(--font-sans);
+  font-size: 0.78rem;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  border: 1px solid var(--gold);
+  transition: all var(--transition-smooth);
+  cursor: pointer;
+}
+
+.btn-outline-gold:hover {
+  background: var(--gold);
+  color: var(--warm-white);
+}
+
+/* ── Animações de entrada ── */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(28px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+@keyframes slideRight {
+  from { opacity: 0; transform: translateX(-20px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+
+.animate-fade-up {
+  animation: fadeUp 0.8s var(--transition-smooth) both;
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.7s ease both;
+}
+
+/* Delay helpers */
+.delay-1 { animation-delay: 0.1s; }
+.delay-2 { animation-delay: 0.2s; }
+.delay-3 { animation-delay: 0.35s; }
+.delay-4 { animation-delay: 0.5s; }
+.delay-5 { animation-delay: 0.65s; }
+
+/* Respeitar preferência de movimento reduzido */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+  html { scroll-behavior: auto; }
+}
+
+/* ── Seção padrão ── */
+.section {
+  padding: var(--section-padding) 0;
+}
+
+.section--dark {
+  background-color: var(--graphite);
+  color: var(--ivory);
+}
+
+.section--nude {
+  background-color: var(--nude-rose);
+}
+
+.section--mauve {
+  background-color: #f3eff2;
+}
+
+/* ── Divisor decorativo ── */
+.divider {
+  width: 100%;
+  height: 1px;
+  background: var(--border-nude);
+  margin: 0;
+}
+
+/* ── Lightbox ── */
+.lightbox-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(41, 38, 37, 0.95);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: fadeIn 0.3s ease;
+}
+
+.lightbox-overlay img {
+  max-width: 90vw;
+  max-height: 85vh;
+  object-fit: contain;
+  border: 1px solid var(--border-light);
+}
+
+.lightbox-close {
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  color: var(--ivory);
+  background: none;
+  border: 1px solid rgba(250, 247, 243, 0.3);
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 1.2rem;
+  transition: all var(--transition-fast);
+}
+
+.lightbox-close:hover {
+  background: var(--gold);
+  border-color: var(--gold);
+}
+
+.lightbox-nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--ivory);
+  background: rgba(41, 38, 37, 0.6);
+  border: 1px solid rgba(250, 247, 243, 0.2);
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 1.4rem;
+  transition: all var(--transition-fast);
+}
+
+.lightbox-nav:hover { background: var(--gold); border-color: var(--gold); }
+.lightbox-prev { left: 24px; }
+.lightbox-next { right: 24px; }
+
+/* ── WhatsApp flutuante ── */
+.whatsapp-float {
+  position: fixed;
+  bottom: 28px;
+  right: 28px;
+  z-index: 900;
+  width: 56px;
+  height: 56px;
+  background: #25D366;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 20px rgba(37, 211, 102, 0.35);
+  transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.whatsapp-float:hover {
+  transform: scale(1.08);
+  box-shadow: 0 6px 28px rgba(37, 211, 102, 0.45);
+}
+
+.whatsapp-float svg {
+  width: 26px;
+  height: 26px;
+  fill: #fff;
+}
