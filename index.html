@@ -1,0 +1,1425 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GS Estética Avançada | Gabrielly Sampaio — Cuidado que valoriza a sua beleza</title>
+  
+  <!-- SEO & Open Graph -->
+  <meta name="description" content="GS Estética Avançada por Gabrielly Sampaio. Tecnologia de ponta, depilação a laser, protocolos faciais e corporais personalizados com elegância e naturalidade.">
+  <meta property="og:title" content="GS Estética Avançada | Gabrielly Sampaio">
+  <meta property="og:description" content="Tecnologia, conhecimento e cuidado individualizado em uma experiência pensada para você.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="./public/images/gabrielly-sampaio-portrait.png">
+  
+  <!-- Favicon SVG -->
+  <link rel="icon" type="image/svg+xml" href="./public/images/logo.svg">
+  
+  <!-- Google Fonts: Cormorant Garamond (Editorial Luxury) + Inter & Manrope (Modern Sans) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,600&family=Inter:wght@300;400;500;600&family=Manrope:wght@300;400;500;600&display=swap" rel="stylesheet">
+  
+  <style>
+    :root {
+      --color-marfim: #FAF7F3;
+      --color-branco-quente: #FFFCF9;
+      --color-nude: #EAD7D3;
+      --color-malva: #C6AAB9;
+      --color-dourado: #B69A60;
+      --color-grafite: #292625;
+      --color-grafite-muted: #645F5D;
+      --color-border: rgba(182, 154, 96, 0.18);
+    }
+    
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    
+    body {
+      background-color: var(--color-marfim);
+      color: var(--color-grafite);
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      overflow-x: hidden;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+    
+    .font-serif-editorial {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+    }
+    
+    .font-sans-editorial {
+      font-family: 'Manrope', 'Inter', sans-serif;
+    }
+
+    /* Utilitários de transição refinada */
+    .transition-luxury {
+      transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    
+    /* Linha de detalhe dourado discreto */
+    .gold-accent-line {
+      height: 1px;
+      background: linear-gradient(90deg, rgba(182,154,96,0) 0%, rgba(182,154,96,0.6) 50%, rgba(182,154,96,0) 100%);
+    }
+
+    /* Modal / Lightbox */
+    .lightbox-open {
+      overflow: hidden;
+    }
+
+    /* Animações respeitando prefers-reduced-motion */
+    @media (prefers-reduced-motion: reduce) {
+      *, ::before, ::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+      }
+    }
+
+    /* Glassmorphism sutil para barra superior */
+    .nav-glass {
+      background: rgba(250, 247, 243, 0.88);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(182, 154, 96, 0.12);
+    }
+
+    /* Efeito de foco acessível */
+    a:focus-visible, button:focus-visible {
+      outline: 2px solid var(--color-dourado);
+      outline-offset: 3px;
+    }
+
+    /* Custom Scrollbar */
+    ::-webkit-scrollbar {
+      width: 8px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #FAF7F3;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #EAD7D3;
+      border-radius: 4px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #C6AAB9;
+    }
+  </style>
+</head>
+<body class="selection:bg-[#EAD7D3] selection:text-[#292625]">
+
+  <!-- HEADER PREMIUM & NAVEGAÇÃO -->
+  <header id="main-header" class="fixed top-0 left-0 right-0 z-50 nav-glass transition-luxury py-4 px-6 md:px-12">
+    <div class="max-w-7xl mx-auto flex items-center justify-between">
+      
+      <!-- Assinatura Tipográfica GS -->
+      <a href="#hero" class="flex items-center gap-3.5 group text-decoration-none">
+        <div class="w-10 h-10 rounded-full border border-[#B69A60]/40 flex items-center justify-center bg-[#FFFCF9] shadow-sm group-hover:border-[#B69A60] transition-luxury">
+          <span class="font-serif-editorial text-lg font-semibold tracking-wider text-[#292625]">GS</span>
+        </div>
+        <div class="flex flex-col">
+          <span class="font-serif-editorial text-xl font-semibold tracking-wide text-[#292625] leading-none group-hover:text-[#B69A60] transition-colors">GS Estética Avançada</span>
+          <span class="text-[9px] uppercase tracking-[0.25em] text-[#B69A60] mt-1 font-sans-editorial font-medium">Gabrielly Sampaio</span>
+        </div>
+      </a>
+
+      <!-- Menu Desktop Editorial -->
+      <nav class="hidden lg:flex items-center space-x-10 text-sm font-sans-editorial tracking-wider text-[#292625]/80" aria-label="Navegação Principal">
+        <a href="#hero" class="hover:text-[#B69A60] transition-colors py-1 relative after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[1px] after:bg-[#B69A60] hover:after:w-full after:transition-all">Início</a>
+        <a href="#sobre" class="hover:text-[#B69A60] transition-colors py-1 relative after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[1px] after:bg-[#B69A60] hover:after:w-full after:transition-all">Sobre</a>
+        <a href="#tratamentos" class="hover:text-[#B69A60] transition-colors py-1 relative after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[1px] after:bg-[#B69A60] hover:after:w-full after:transition-all">Tratamentos</a>
+        <a href="#tecnologia" class="hover:text-[#B69A60] transition-colors py-1 relative after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[1px] after:bg-[#B69A60] hover:after:w-full after:transition-all">Tecnologia</a>
+        <a href="#galeria" class="hover:text-[#B69A60] transition-colors py-1 relative after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[1px] after:bg-[#B69A60] hover:after:w-full after:transition-all">Galeria</a>
+        <a href="#experiencia" class="hover:text-[#B69A60] transition-colors py-1 relative after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[1px] after:bg-[#B69A60] hover:after:w-full after:transition-all">Experiência</a>
+        <a href="#contato" class="hover:text-[#B69A60] transition-colors py-1 relative after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[1px] after:bg-[#B69A60] hover:after:w-full after:transition-all">Contato</a>
+      </nav>
+
+      <!-- Botão Destacado de Ação -->
+      <div class="hidden lg:flex items-center space-x-4">
+        <button id="header-cta-btn" onclick="openContactModal()" class="px-6 py-2.5 rounded-full text-xs font-sans-editorial uppercase tracking-widest font-semibold border border-[#B69A60] text-[#292625] bg-gradient-to-r from-transparent to-[#EAD7D3]/20 hover:bg-[#B69A60] hover:text-[#FAF7F3] transition-luxury shadow-sm cursor-pointer">
+          Agendar Avaliação
+        </button>
+      </div>
+
+      <!-- Botão Hamburguer Mobile -->
+      <button id="mobile-menu-toggle" aria-label="Abrir Menu de Navegação" class="lg:hidden p-2 text-[#292625] focus:outline-none">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path id="hamburger-icon" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 7h16M4 12h16M4 17h16"></path>
+          <path id="close-icon" class="hidden" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M6 18L18 6M6 6l12 12"></path>
+        </svg>
+      </button>
+    </div>
+
+    <!-- Menu Mobile Dropdown -->
+    <div id="mobile-menu" class="hidden lg:hidden pt-6 pb-8 px-6 bg-[#FAF7F3] border-t border-[#B69A60]/15 mt-3 space-y-5 animate-fadeIn">
+      <a href="#hero" class="block text-lg font-serif-editorial text-[#292625] hover:text-[#B69A60] mobile-link">Início</a>
+      <a href="#sobre" class="block text-lg font-serif-editorial text-[#292625] hover:text-[#B69A60] mobile-link">Sobre Gabrielly Sampaio</a>
+      <a href="#tratamentos" class="block text-lg font-serif-editorial text-[#292625] hover:text-[#B69A60] mobile-link">Tratamentos</a>
+      <a href="#tecnologia" class="block text-lg font-serif-editorial text-[#292625] hover:text-[#B69A60] mobile-link">Tecnologia &amp; Equipamentos</a>
+      <a href="#galeria" class="block text-lg font-serif-editorial text-[#292625] hover:text-[#B69A60] mobile-link">Galeria Visual</a>
+      <a href="#experiencia" class="block text-lg font-serif-editorial text-[#292625] hover:text-[#B69A60] mobile-link">Experiência de Atendimento</a>
+      <a href="#faq" class="block text-lg font-serif-editorial text-[#292625] hover:text-[#B69A60] mobile-link">Dúvidas Frequentes</a>
+      <a href="#contato" class="block text-lg font-serif-editorial text-[#292625] hover:text-[#B69A60] mobile-link">Contato &amp; Localização</a>
+      <div class="pt-4 border-t border-[#B69A60]/20">
+        <button onclick="openContactModal()" class="w-full py-3.5 rounded-full text-center text-xs font-sans-editorial uppercase tracking-widest font-semibold border border-[#B69A60] text-[#FAF7F3] bg-[#292625] hover:bg-[#B69A60] transition-luxury cursor-pointer">
+          Agendar Avaliação
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- SEÇÃO B: HERO — PRIMEIRA DOBRA EDITORIAL -->
+  <section id="hero" class="min-h-screen pt-32 pb-20 px-6 md:px-12 flex items-center relative overflow-hidden bg-gradient-to-b from-[#FAF7F3] via-[#FFFCF9] to-[#FAF7F3]">
+    <!-- Elementos sutis de fundo -->
+    <div class="absolute top-1/4 right-0 w-96 h-96 bg-[#EAD7D3]/30 rounded-full blur-3xl pointer-events-none"></div>
+    <div class="absolute bottom-10 left-10 w-80 h-80 bg-[#C6AAB9]/15 rounded-full blur-3xl pointer-events-none"></div>
+
+    <div class="max-w-7xl mx-auto w-full grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
+      
+      <!-- Coluna de Conteúdo Editorial (7 colunas) -->
+      <div class="lg:col-span-7 flex flex-col justify-center pr-0 lg:pr-8 z-10">
+        
+        <div class="inline-flex items-center gap-3 mb-6">
+          <span class="w-8 h-[1px] bg-[#B69A60]"></span>
+          <span class="text-xs uppercase tracking-[0.3em] font-sans-editorial font-semibold text-[#B69A60]">GS ESTÉTICA AVANÇADA</span>
+        </div>
+
+        <h1 class="font-serif-editorial text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-light text-[#292625] leading-[1.08] tracking-tight mb-8">
+          Cuidado que <br>
+          <span class="italic font-normal font-serif-editorial text-[#292625]">valoriza a sua</span> <br>
+          <span class="relative inline-block">
+            beleza natural.
+            <svg class="absolute -bottom-2 left-0 w-full h-2 text-[#EAD7D3]" viewBox="0 0 100 10" preserveAspectRatio="none">
+              <path d="M0 5 Q 50 10 100 5" stroke="currentColor" stroke-width="3" fill="none"/>
+            </svg>
+          </span>
+        </h1>
+
+        <p class="text-base sm:text-lg md:text-xl text-[#645F5D] font-light max-w-xl leading-relaxed mb-10">
+          Tecnologia, conhecimento e cuidado individualizado em uma experiência pensada para você.
+        </p>
+
+        <!-- Ações do Hero -->
+        <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 sm:gap-6">
+          <button onclick="openContactModal()" class="px-8 py-4 rounded-full text-xs font-sans-editorial uppercase tracking-widest font-semibold bg-[#292625] text-[#FFFCF9] hover:bg-[#B69A60] transition-luxury shadow-lg shadow-[#292625]/5 flex items-center justify-center gap-3 group cursor-pointer">
+            <span>Agendar Atendimento</span>
+            <svg class="w-4 h-4 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
+            </svg>
+          </button>
+
+          <a href="#tratamentos" class="px-8 py-4 rounded-full text-xs font-sans-editorial uppercase tracking-widest font-semibold border border-[#B69A60]/50 text-[#292625] hover:border-[#B69A60] hover:bg-[#FAF7F3] transition-luxury text-center">
+            Conhecer Tratamentos
+          </a>
+        </div>
+
+        <!-- Indicador de Exclusividade e Ética -->
+        <div class="mt-14 pt-8 border-t border-[#B69A60]/15 grid grid-cols-2 sm:grid-cols-3 gap-6 text-[#292625]">
+          <div>
+            <span class="block font-serif-editorial text-2xl font-normal text-[#292625]">Personalizado</span>
+            <span class="text-[11px] font-sans-editorial text-[#645F5D] uppercase tracking-wider">Protocolos Únicos</span>
+          </div>
+          <div>
+            <span class="block font-serif-editorial text-2xl font-normal text-[#292625]">Tecnologia</span>
+            <span class="text-[11px] font-sans-editorial text-[#645F5D] uppercase tracking-wider">Aparelhos Modernos</span>
+          </div>
+          <div class="col-span-2 sm:col-span-1">
+            <span class="block font-serif-editorial text-2xl font-normal text-[#292625]">Naturalidade</span>
+            <span class="text-[11px] font-sans-editorial text-[#645F5D] uppercase tracking-wider">Harmonia e Saúde</span>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Coluna Visual com Fotografia Original de Gabrielly (5 colunas) -->
+      <div class="lg:col-span-5 relative">
+        <div class="relative mx-auto max-w-md lg:max-w-none">
+          
+          <!-- Moldura Editorial com Borda e Sombra Suave -->
+          <div class="relative rounded-2xl overflow-hidden bg-[#FFFCF9] border border-[#B69A60]/25 shadow-2xl p-2.5">
+            <div class="relative aspect-[3/4] rounded-xl overflow-hidden bg-[#EAD7D3]/20">
+              <img 
+                src="./public/images/gabrielly-sampaio-portrait.png" 
+                alt="Gabrielly Sampaio - GS Estética Avançada" 
+                class="w-full h-full object-cover object-top filter contrast-[1.02] hover:scale-105 transition-luxury duration-700"
+                loading="eager"
+              >
+              <!-- Gradiente sutil inferior para garantir contraste -->
+              <div class="absolute inset-0 bg-gradient-to-t from-[#292625]/60 via-transparent to-transparent opacity-60"></div>
+              
+              <div class="absolute bottom-6 left-6 right-6 text-[#FAF7F3]">
+                <p class="text-xs uppercase tracking-[0.2em] font-sans-editorial text-[#EAD7D3] font-medium">Responsável Técnica</p>
+                <h3 class="font-serif-editorial text-2xl font-medium tracking-wide">Gabrielly Sampaio</h3>
+                <p class="text-xs text-[#FAF7F3]/80 font-light mt-0.5">Estética Integrada &amp; Tecnologias Avançadas</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Badge flutuante editorial -->
+          <div class="absolute -bottom-6 -left-6 bg-[#FFFCF9] border border-[#B69A60]/30 rounded-xl p-4 shadow-xl hidden sm:flex items-center gap-3 max-w-[240px]">
+            <div class="w-9 h-9 rounded-full bg-[#FAF7F3] border border-[#B69A60]/40 flex items-center justify-center text-[#B69A60]">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
+              </svg>
+            </div>
+            <div>
+              <p class="text-[10px] uppercase tracking-wider text-[#645F5D] font-semibold">Compromisso</p>
+              <p class="text-xs font-serif-editorial font-medium text-[#292625]">Excelência e Segurança em cada protocolo</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- SEÇÃO C: APRESENTAÇÃO DA PROFISSIONAL -->
+  <section id="sobre" class="py-28 px-6 md:px-12 bg-[#FFFCF9] relative border-t border-[#B69A60]/10">
+    <div class="max-w-7xl mx-auto">
+      
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+        
+        <!-- Fotografia de Ação Original de Gabrielly aplicando Laser -->
+        <div class="lg:col-span-5 order-2 lg:order-1">
+          <div class="relative max-w-md mx-auto lg:max-w-none">
+            <div class="aspect-[4/5] rounded-2xl overflow-hidden bg-[#FAF7F3] border border-[#B69A60]/20 shadow-xl p-2">
+              <div class="w-full h-full rounded-xl overflow-hidden relative">
+                <img 
+                  src="./public/images/gabrielly-procedimento-laser.png" 
+                  alt="Gabrielly Sampaio realizando procedimento com tecnologia a laser" 
+                  class="w-full h-full object-cover object-center filter contrast-[1.03]"
+                  loading="lazy"
+                >
+                <div class="absolute inset-0 bg-gradient-to-t from-[#292625]/40 via-transparent to-transparent"></div>
+              </div>
+            </div>
+            
+            <div class="mt-4 flex items-center justify-between px-2 text-xs text-[#645F5D]">
+              <span class="font-sans-editorial tracking-wider text-[#B69A60] uppercase text-[10px] font-semibold">Registro de Atendimento Real</span>
+              <span class="italic font-serif-editorial">Protocolo de Alta Precisão</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Texto Editorial Conciso e Acolhedor -->
+        <div class="lg:col-span-7 order-1 lg:order-2 flex flex-col justify-center">
+          
+          <div class="inline-flex items-center gap-3 mb-4">
+            <span class="w-8 h-[1px] bg-[#B69A60]"></span>
+            <span class="text-xs uppercase tracking-[0.25em] font-sans-editorial font-semibold text-[#B69A60]">SOBRE A PROFISSIONAL</span>
+          </div>
+
+          <h2 class="font-serif-editorial text-3xl sm:text-4xl md:text-5xl font-light text-[#292625] leading-tight mb-8">
+            Beleza, conhecimento e cuidado em cada detalhe.
+          </h2>
+
+          <div class="space-y-6 text-[#645F5D] text-base md:text-lg font-light leading-relaxed">
+            <p>
+              Na <strong class="font-medium text-[#292625]">GS Estética Avançada</strong>, cada pessoa é compreendida em sua singularidade. Conduzida por <strong class="font-medium text-[#292625]">Gabrielly Sampaio</strong>, a clínica nasceu com o propósito de unir o rigor da ciência estética moderna ao acolhimento humanizado.
+            </p>
+            <p>
+              Acreditamos que a verdadeira beleza não reside na transformação artificial, mas sim no realce harmonioso das suas próprias características. Cada atendimento se inicia com uma avaliação atenta para compreender sua história, estilo de vida e metas de autocuidado.
+            </p>
+            <p class="text-sm border-l-2 border-[#B69A60] pl-4 italic text-[#292625]/90 py-1">
+              "Nosso maior compromisso é proporcionar uma atmosfera de bem-estar onde a tecnologia de ponta atua a favor da sua autoestima, com responsabilidade e respeito."
+            </p>
+          </div>
+
+          <!-- Pilares do Atendimento -->
+          <div class="mt-10 grid grid-cols-1 sm:grid-cols-3 gap-6 pt-8 border-t border-[#B69A60]/15">
+            <div>
+              <h4 class="font-serif-editorial text-xl font-medium text-[#292625]">Acolhimento</h4>
+              <p class="text-xs text-[#645F5D] mt-1 font-light">Espaço seguro para escuta atenta das suas necessidades.</p>
+            </div>
+            <div>
+              <h4 class="font-serif-editorial text-xl font-medium text-[#292625]">Segurança</h4>
+              <p class="text-xs text-[#645F5D] mt-1 font-light">Biossegurança e protocolos testados e certificados.</p>
+            </div>
+            <div>
+              <h4 class="font-serif-editorial text-xl font-medium text-[#292625]">Resultados Reais</h4>
+              <p class="text-xs text-[#645F5D] mt-1 font-light">Evolução progressiva com naturalidade e conforto.</p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- SEÇÃO D: SEÇÃO DE TRATAMENTOS (CARTÕES EDITORIAIS GRANDES) -->
+  <section id="tratamentos" class="py-28 px-6 md:px-12 bg-[#FAF7F3] relative">
+    <div class="max-w-7xl mx-auto">
+      
+      <div class="text-center max-w-3xl mx-auto mb-20">
+        <div class="inline-flex items-center gap-3 mb-4 justify-center">
+          <span class="w-8 h-[1px] bg-[#B69A60]"></span>
+          <span class="text-xs uppercase tracking-[0.25em] font-sans-editorial font-semibold text-[#B69A60]">MENU DE PROTOCOLOS</span>
+          <span class="w-8 h-[1px] bg-[#B69A60]"></span>
+        </div>
+        <h2 class="font-serif-editorial text-3xl sm:text-4xl md:text-5xl font-light text-[#292625] leading-tight mb-6">
+          Tratamentos desenhados para a sua singularidade.
+        </h2>
+        <p class="text-base text-[#645F5D] font-light max-w-2xl mx-auto">
+          Protocolos modernos que combinam dermocosméticos de alto desempenho e aparelhos de tecnologia avançada. Selecione um tratamento para consultar detalhes.
+        </p>
+      </div>
+
+      <!-- Grid Editorial de Cartões Grandes -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        
+        <!-- Cartão 1: Depilação a Laser -->
+        <article class="group bg-[#FFFCF9] rounded-2xl overflow-hidden border border-[#B69A60]/20 hover:border-[#B69A60]/50 transition-luxury shadow-sm hover:shadow-xl flex flex-col">
+          <div class="relative aspect-[16/11] overflow-hidden bg-[#FAF7F3]">
+            <img 
+              src="./public/images/gabrielly-procedimento-laser.png" 
+              alt="Depilação a Laser de Alta Tecnologia" 
+              class="w-full h-full object-cover group-hover:scale-105 transition-luxury duration-700"
+              loading="lazy"
+            >
+            <span class="absolute top-4 right-4 bg-[#FFFCF9]/95 text-[#B69A60] text-[10px] uppercase tracking-widest font-sans-editorial font-semibold px-3 py-1 rounded-full border border-[#B69A60]/30 backdrop-blur-sm">
+              Destaque
+            </span>
+          </div>
+          <div class="p-8 flex-1 flex flex-col justify-between">
+            <div>
+              <span class="text-[11px] font-sans-editorial uppercase tracking-widest text-[#B69A60] font-semibold">Tecnologia &amp; Conforto</span>
+              <h3 class="font-serif-editorial text-2xl font-medium text-[#292625] mt-1 mb-3">Depilação a Laser</h3>
+              <p class="text-sm text-[#645F5D] font-light leading-relaxed mb-6">
+                Remoção progressiva e duradoura dos pelos com sistema de resfriamento integrado na ponteira para uma experiência segura e muito mais confortável.
+              </p>
+              <ul class="space-y-2 mb-6 text-xs text-[#292625]/80">
+                <li class="flex items-center gap-2">
+                  <span class="w-1.5 h-1.5 rounded-full bg-[#B69A60]"></span> Pele macia e livre de foliculite
+                </li>
+                <li class="flex items-center gap-2">
+                  <span class="w-1.5 h-1.5 rounded-full bg-[#B69A60]"></span> Parâmetros adaptados ao fototipo
+                </li>
+              </ul>
+            </div>
+            <button onclick="openTreatmentModal('Depilação a Laser', 'Remoção progressiva e duradoura dos pelos com tecnologia de disparo precisa e resfriamento na ponteira. Ideal para quem busca praticidade sem abrir mão do conforto cutâneo.')" class="w-full py-3 rounded-xl border border-[#B69A60]/40 text-xs font-sans-editorial uppercase tracking-widest font-semibold text-[#292625] hover:bg-[#B69A60] hover:text-[#FAF7F3] transition-luxury text-center cursor-pointer">
+              Saiba Mais
+            </button>
+          </div>
+        </article>
+
+        <!-- Cartão 2: Tratamentos Faciais e Skincare -->
+        <article class="group bg-[#FFFCF9] rounded-2xl overflow-hidden border border-[#B69A60]/20 hover:border-[#B69A60]/50 transition-luxury shadow-sm hover:shadow-xl flex flex-col">
+          <div class="relative aspect-[16/11] overflow-hidden bg-[#FAF7F3]">
+            <img 
+              src="./public/images/tratamento-facial.svg" 
+              alt="Tratamentos Faciais e Skincare" 
+              class="w-full h-full object-cover group-hover:scale-105 transition-luxury duration-700"
+              loading="lazy"
+            >
+          </div>
+          <div class="p-8 flex-1 flex flex-col justify-between">
+            <div>
+              <span class="text-[11px] font-sans-editorial uppercase tracking-widest text-[#B69A60] font-semibold">Revitalização &amp; Glow</span>
+              <h3 class="font-serif-editorial text-2xl font-medium text-[#292625] mt-1 mb-3">Faciais &amp; Skincare</h3>
+              <p class="text-sm text-[#645F5D] font-light leading-relaxed mb-6">
+                Higienização profunda, hidratação biocompatível e protocolos de revitalização da barreira cutânea que restauram o viço natural e a luminosidade.
+              </p>
+              <ul class="space-y-2 mb-6 text-xs text-[#292625]/80">
+                <li class="flex items-center gap-2">
+                  <span class="w-1.5 h-1.5 rounded-full bg-[#B69A60]"></span> Renovação celular controlada
+                </li>
+                <li class="flex items-center gap-2">
+                  <span class="w-1.5 h-1.5 rounded-full bg-[#B69A60]"></span> Nutrição intensiva de ativos
+                </li>
+              </ul>
+            </div>
+            <button onclick="openTreatmentModal('Faciais &amp; Skincare', 'Protocolos faciais formulados para equilibrar o microbioma da pele, desobstruir poros e iluminar o relevo dérmico com segurança e suavidade.')" class="w-full py-3 rounded-xl border border-[#B69A60]/40 text-xs font-sans-editorial uppercase tracking-widest font-semibold text-[#292625] hover:bg-[#B69A60] hover:text-[#FAF7F3] transition-luxury text-center cursor-pointer">
+              Saiba Mais
+            </button>
+          </div>
+        </article>
+
+        <!-- Cartão 3: Tratamentos Corporais -->
+        <article class="group bg-[#FFFCF9] rounded-2xl overflow-hidden border border-[#B69A60]/20 hover:border-[#B69A60]/50 transition-luxury shadow-sm hover:shadow-xl flex flex-col">
+          <div class="relative aspect-[16/11] overflow-hidden bg-[#FAF7F3]">
+            <img 
+              src="./public/images/tratamento-corporal.svg" 
+              alt="Tratamentos Corporais Integrados" 
+              class="w-full h-full object-cover group-hover:scale-105 transition-luxury duration-700"
+              loading="lazy"
+            >
+          </div>
+          <div class="p-8 flex-1 flex flex-col justify-between">
+            <div>
+              <span class="text-[11px] font-sans-editorial uppercase tracking-widest text-[#B69A60] font-semibold">Harmonia &amp; Bem-Estar</span>
+              <h3 class="font-serif-editorial text-2xl font-medium text-[#292625] mt-1 mb-3">Corporais Integrados</h3>
+              <p class="text-sm text-[#645F5D] font-light leading-relaxed mb-6">
+                Abordagens sob medida para firmeza, textura da pele e estimulação da circulação tecidual, integrando manobras manuais e recursos estéticos.
+              </p>
+              <ul class="space-y-2 mb-6 text-xs text-[#292625]/80">
+                <li class="flex items-center gap-2">
+                  <span class="w-1.5 h-1.5 rounded-full bg-[#B69A60]"></span> Estímulo à oxigenação local
+                </li>
+                <li class="flex items-center gap-2">
+                  <span class="w-1.5 h-1.5 rounded-full bg-[#B69A60]"></span> Alívio de tensões e retenção
+                </li>
+              </ul>
+            </div>
+            <button onclick="openTreatmentModal('Tratamentos Corporais', 'Combinações personalizadas para suporte à densidade cutânea, firmeza e sensação de renovação corporal completa.')" class="w-full py-3 rounded-xl border border-[#B69A60]/40 text-xs font-sans-editorial uppercase tracking-widest font-semibold text-[#292625] hover:bg-[#B69A60] hover:text-[#FAF7F3] transition-luxury text-center cursor-pointer">
+              Saiba Mais
+            </button>
+          </div>
+        </article>
+
+        <!-- Cartão 4: Criolipólise -->
+        <article class="group bg-[#FFFCF9] rounded-2xl overflow-hidden border border-[#B69A60]/20 hover:border-[#B69A60]/50 transition-luxury shadow-sm hover:shadow-xl flex flex-col">
+          <div class="relative aspect-[16/11] overflow-hidden bg-[#FAF7F3]">
+            <img 
+              src="./public/images/resultado-corporal-1.png" 
+              alt="Criolipólise Avançada" 
+              class="w-full h-full object-cover group-hover:scale-105 transition-luxury duration-700"
+              loading="lazy"
+            >
+            <span class="absolute top-4 right-4 bg-[#FFFCF9]/95 text-[#B69A60] text-[10px] uppercase tracking-widest font-sans-editorial font-semibold px-3 py-1 rounded-full border border-[#B69A60]/30 backdrop-blur-sm">
+              Protocolo Exclusivo
+            </span>
+          </div>
+          <div class="p-8 flex-1 flex flex-col justify-between">
+            <div>
+              <span class="text-[11px] font-sans-editorial uppercase tracking-widest text-[#B69A60] font-semibold">Modelagem Não Invasiva</span>
+              <h3 class="font-serif-editorial text-2xl font-medium text-[#292625] mt-1 mb-3">Criolipólise Avançada</h3>
+              <p class="text-sm text-[#645F5D] font-light leading-relaxed mb-6">
+                Procedimento controlado de resfriamento direcionado para harmonização das proporções corporais em áreas específicas e delimitadas com rigor.
+              </p>
+              <ul class="space-y-2 mb-6 text-xs text-[#292625]/80">
+                <li class="flex items-center gap-2">
+                  <span class="w-1.5 h-1.5 rounded-full bg-[#B69A60]"></span> Parâmetros estritamente calibrados
+                </li>
+                <li class="flex items-center gap-2">
+                  <span class="w-1.5 h-1.5 rounded-full bg-[#B69A60]"></span> Acompanhamento contínuo da evolução
+                </li>
+              </ul>
+            </div>
+            <button onclick="openTreatmentModal('Criolipólise Avançada', 'Aplicação focada com tecnologia de resfriamento homogêneo, indicada após anamnese minuciosa para alinhamento de expectativas e resultados naturais.')" class="w-full py-3 rounded-xl border border-[#B69A60]/40 text-xs font-sans-editorial uppercase tracking-widest font-semibold text-[#292625] hover:bg-[#B69A60] hover:text-[#FAF7F3] transition-luxury text-center cursor-pointer">
+              Saiba Mais
+            </button>
+          </div>
+        </article>
+
+        <!-- Cartão 5: Contorno Corporal -->
+        <article class="group bg-[#FFFCF9] rounded-2xl overflow-hidden border border-[#B69A60]/20 hover:border-[#B69A60]/50 transition-luxury shadow-sm hover:shadow-xl flex flex-col">
+          <div class="relative aspect-[16/11] overflow-hidden bg-[#FAF7F3]">
+            <img 
+              src="./public/images/resultado-corporal-2.png" 
+              alt="Protocolos de Contorno Corporal" 
+              class="w-full h-full object-cover group-hover:scale-105 transition-luxury duration-700"
+              loading="lazy"
+            >
+          </div>
+          <div class="p-8 flex-1 flex flex-col justify-between">
+            <div>
+              <span class="text-[11px] font-sans-editorial uppercase tracking-widest text-[#B69A60] font-semibold">Definição &amp; Tônus</span>
+              <h3 class="font-serif-editorial text-2xl font-medium text-[#292625] mt-1 mb-3">Contorno Corporal</h3>
+              <p class="text-sm text-[#645F5D] font-light leading-relaxed mb-6">
+                Sinergia de técnicas mecânicas e fisiológicas para favorecer o alinhamento da silhueta e a textura dérmica ao longo das sessões recomendadas.
+              </p>
+              <ul class="space-y-2 mb-6 text-xs text-[#292625]/80">
+                <li class="flex items-center gap-2">
+                  <span class="w-1.5 h-1.5 rounded-full bg-[#B69A60]"></span> Estímulo à microcirculação
+                </li>
+                <li class="flex items-center gap-2">
+                  <span class="w-1.5 h-1.5 rounded-full bg-[#B69A60]"></span> Planejamento personalizado de metas
+                </li>
+              </ul>
+            </div>
+            <button onclick="openTreatmentModal('Contorno Corporal', 'Protocolos sinérgicos elaborados para realçar as curvas com elegância e sem procedimentos agressivos.')" class="w-full py-3 rounded-xl border border-[#B69A60]/40 text-xs font-sans-editorial uppercase tracking-widest font-semibold text-[#292625] hover:bg-[#B69A60] hover:text-[#FAF7F3] transition-luxury text-center cursor-pointer">
+              Saiba Mais
+            </button>
+          </div>
+        </article>
+
+        <!-- Cartão 6: Detox Corporal e Drenagem -->
+        <article class="group bg-[#FFFCF9] rounded-2xl overflow-hidden border border-[#B69A60]/20 hover:border-[#B69A60]/50 transition-luxury shadow-sm hover:shadow-xl flex flex-col">
+          <div class="relative aspect-[16/11] overflow-hidden bg-[#FAF7F3]">
+            <img 
+              src="./public/images/detox-corporal.svg" 
+              alt="Detox Corporal e Drenagem Linfática" 
+              class="w-full h-full object-cover group-hover:scale-105 transition-luxury duration-700"
+              loading="lazy"
+            >
+          </div>
+          <div class="p-8 flex-1 flex flex-col justify-between">
+            <div>
+              <span class="text-[11px] font-sans-editorial uppercase tracking-widest text-[#B69A60] font-semibold">Desintoxicação &amp; Leveza</span>
+              <h3 class="font-serif-editorial text-2xl font-medium text-[#292625] mt-1 mb-3">Detox &amp; Drenagem</h3>
+              <p class="text-sm text-[#645F5D] font-light leading-relaxed mb-6">
+                Eliminação de líquidos retidos e restauração da leveza corpórea com manobras drenantes especializadas que reativam o fluxo linfático.
+              </p>
+              <ul class="space-y-2 mb-6 text-xs text-[#292625]/80">
+                <li class="flex items-center gap-2">
+                  <span class="w-1.5 h-1.5 rounded-full bg-[#B69A60]"></span> Redução imediata da sensação de peso
+                </li>
+                <li class="flex items-center gap-2">
+                  <span class="w-1.5 h-1.5 rounded-full bg-[#B69A60]"></span> Equilíbrio hidrolipídico do tecido
+                </li>
+              </ul>
+            </div>
+            <button onclick="openTreatmentModal('Detox &amp; Drenagem', 'Sensação imediata de conforto físico e desinchaço, ideal para manutenção preventiva e relaxamento integral.')" class="w-full py-3 rounded-xl border border-[#B69A60]/40 text-xs font-sans-editorial uppercase tracking-widest font-semibold text-[#292625] hover:bg-[#B69A60] hover:text-[#FAF7F3] transition-luxury text-center cursor-pointer">
+              Saiba Mais
+            </button>
+          </div>
+        </article>
+
+      </div>
+
+      <!-- Nota de Transparência Ética -->
+      <div class="mt-16 text-center">
+        <p class="text-xs text-[#645F5D]/80 font-light max-w-xl mx-auto italic">
+          * A indicação e o número de sessões são estabelecidos individualmente após consulta avaliativa. Tratamentos estéticos não garantem curas ou resultados idênticos entre pacientes.
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- SEÇÃO E: SEÇÃO DE TECNOLOGIA -->
+  <section id="tecnologia" class="py-28 px-6 md:px-12 bg-[#FFFCF9] relative border-t border-[#B69A60]/10">
+    <div class="max-w-7xl mx-auto">
+      
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+        
+        <div class="lg:col-span-6">
+          <div class="inline-flex items-center gap-3 mb-4">
+            <span class="w-8 h-[1px] bg-[#B69A60]"></span>
+            <span class="text-xs uppercase tracking-[0.25em] font-sans-editorial font-semibold text-[#B69A60]">INOVAÇÃO &amp; RIGOR</span>
+          </div>
+          
+          <h2 class="font-serif-editorial text-3xl sm:text-4xl md:text-5xl font-light text-[#292625] leading-tight mb-6">
+            Tecnologia a serviço do seu cuidado.
+          </h2>
+
+          <p class="text-base sm:text-lg text-[#645F5D] font-light leading-relaxed mb-8">
+            Conheça as tecnologias e os protocolos utilizados em nossos atendimentos. Investimos continuamente em equipamentos que conferem estabilidade, conforto térmico e precisão cirúrgica em cada sessão.
+          </p>
+
+          <div class="space-y-6">
+            <div class="p-5 rounded-xl bg-[#FAF7F3] border border-[#B69A60]/15">
+              <h4 class="font-serif-editorial text-xl font-medium text-[#292625]">Ponteiras de Resfriamento Cutâneo</h4>
+              <p class="text-xs sm:text-sm text-[#645F5D] mt-1 font-light">
+                Mantêm a epiderme protegida termicamente durante as emissões de energia, permitindo maior entrega de potência com mínima sensibilidade dolorosa.
+              </p>
+            </div>
+
+            <div class="p-5 rounded-xl bg-[#FAF7F3] border border-[#B69A60]/15">
+              <h4 class="font-serif-editorial text-xl font-medium text-[#292625]">Controle Milimétrico de Parâmetros</h4>
+              <p class="text-xs sm:text-sm text-[#645F5D] mt-1 font-light">
+                Ajuste fino de comprimento de onda, fluência e tempo de pulso de acordo com a resposta biológica de cada organismo.
+              </p>
+            </div>
+          </div>
+
+          <div class="mt-10">
+            <button onclick="openContactModal()" class="px-8 py-3.5 rounded-full text-xs font-sans-editorial uppercase tracking-widest font-semibold border border-[#B69A60] text-[#FAF7F3] bg-[#292625] hover:bg-[#B69A60] transition-luxury cursor-pointer">
+              Consultar Tratamentos
+            </button>
+          </div>
+        </div>
+
+        <div class="lg:col-span-6">
+          <div class="relative rounded-2xl overflow-hidden border border-[#B69A60]/30 shadow-2xl p-2 bg-[#FAF7F3]">
+            <div class="aspect-[4/3] rounded-xl overflow-hidden relative">
+              <img 
+                src="./public/images/gabrielly-procedimento-laser.png" 
+                alt="Equipamentos de alta tecnologia na GS Estética Avançada" 
+                class="w-full h-full object-cover filter contrast-[1.02]"
+                loading="lazy"
+              >
+              <div class="absolute inset-0 bg-gradient-to-t from-[#292625]/50 via-transparent to-transparent"></div>
+              <div class="absolute bottom-6 left-6 text-[#FAF7F3]">
+                <span class="text-[10px] uppercase tracking-widest text-[#EAD7D3] font-semibold">Equipamentos Auditados</span>
+                <p class="font-serif-editorial text-xl">Protocolos com Normas Rigorosas de Segurança</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- SEÇÃO F & G: GALERIA VISUAL EDITORIAL E ACOMPANHAMENTOS AUTORIZADOS -->
+  <section id="galeria" class="py-28 px-6 md:px-12 bg-[#FAF7F3] relative border-t border-[#B69A60]/10">
+    <div class="max-w-7xl mx-auto">
+      
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <div class="inline-flex items-center gap-3 mb-4 justify-center">
+          <span class="w-8 h-[1px] bg-[#B69A60]"></span>
+          <span class="text-xs uppercase tracking-[0.25em] font-sans-editorial font-semibold text-[#B69A60]">REGISTROS REAIS</span>
+          <span class="w-8 h-[1px] bg-[#B69A60]"></span>
+        </div>
+        <h2 class="font-serif-editorial text-3xl sm:text-4xl md:text-5xl font-light text-[#292625] leading-tight mb-6">
+          Galeria visual e evolução documentada.
+        </h2>
+        <p class="text-base text-[#645F5D] font-light max-w-2xl mx-auto">
+          Explore os bastidores do nosso consultório, os procedimentos técnicos e registros de acompanhamento corporal autorizados pelas pacientes. Clique em qualquer imagem para ampliar.
+        </p>
+      </div>
+
+      <!-- Composição Assimétrica Editorial -->
+      <div class="grid grid-cols-1 md:grid-cols-12 gap-6">
+        
+        <!-- Foto 1: Retrato Principal (6 colunas) -->
+        <div class="md:col-span-6 group cursor-pointer" onclick="openLightbox('./public/images/gabrielly-sampaio-portrait.png', 'Gabrielly Sampaio no consultório da GS Estética Avançada')">
+          <div class="relative h-[440px] rounded-2xl overflow-hidden border border-[#B69A60]/20 shadow-md bg-[#FFFCF9]">
+            <img 
+              src="./public/images/gabrielly-sampaio-portrait.png" 
+              alt="Gabrielly Sampaio" 
+              class="w-full h-full object-cover object-top group-hover:scale-105 transition-luxury duration-700"
+              loading="lazy"
+            >
+            <div class="absolute inset-0 bg-[#292625]/30 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+              <span class="px-5 py-2.5 rounded-full bg-[#FFFCF9]/90 text-[#292625] text-xs font-sans-editorial uppercase tracking-wider font-semibold backdrop-blur-sm">
+                Ampliar Imagem
+              </span>
+            </div>
+            <div class="absolute bottom-4 left-4 right-4 bg-[#FFFCF9]/90 backdrop-blur-sm p-4 rounded-xl border border-[#B69A60]/20">
+              <span class="text-[10px] uppercase tracking-wider text-[#B69A60] font-semibold">Espaço &amp; Atendimento</span>
+              <p class="font-serif-editorial text-lg text-[#292625]">Acolhimento profissional e ambiente higienizado</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Foto 2: Procedimento Laser (6 colunas) -->
+        <div class="md:col-span-6 group cursor-pointer" onclick="openLightbox('./public/images/gabrielly-procedimento-laser.png', 'Aplicação de tecnologia a laser com proteção ocular e máscara')">
+          <div class="relative h-[440px] rounded-2xl overflow-hidden border border-[#B69A60]/20 shadow-md bg-[#FFFCF9]">
+            <img 
+              src="./public/images/gabrielly-procedimento-laser.png" 
+              alt="Aplicação a Laser" 
+              class="w-full h-full object-cover object-center group-hover:scale-105 transition-luxury duration-700"
+              loading="lazy"
+            >
+            <div class="absolute inset-0 bg-[#292625]/30 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+              <span class="px-5 py-2.5 rounded-full bg-[#FFFCF9]/90 text-[#292625] text-xs font-sans-editorial uppercase tracking-wider font-semibold backdrop-blur-sm">
+                Ampliar Imagem
+              </span>
+            </div>
+            <div class="absolute bottom-4 left-4 right-4 bg-[#FFFCF9]/90 backdrop-blur-sm p-4 rounded-xl border border-[#B69A60]/20">
+              <span class="text-[10px] uppercase tracking-wider text-[#B69A60] font-semibold">Técnica &amp; Biossegurança</span>
+              <p class="font-serif-editorial text-lg text-[#292625]">Procedimento executado com equipamentos de proteção certificados</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Foto 3: Acompanhamento Corporal 1 (6 colunas) -->
+        <div class="md:col-span-6 group cursor-pointer" onclick="openLightbox('./public/images/resultado-corporal-1.png', 'Registro de evolução de contorno dorsal e flancos — Resultado autorizado')">
+          <div class="relative h-[380px] rounded-2xl overflow-hidden border border-[#B69A60]/20 shadow-md bg-[#FFFCF9]">
+            <img 
+              src="./public/images/resultado-corporal-1.png" 
+              alt="Acompanhamento de protocolo corporal de flancos" 
+              class="w-full h-full object-contain p-2 bg-[#FFFCF9] group-hover:scale-105 transition-luxury duration-700"
+              loading="lazy"
+            >
+            <div class="absolute inset-0 bg-[#292625]/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+              <span class="px-5 py-2.5 rounded-full bg-[#FFFCF9]/90 text-[#292625] text-xs font-sans-editorial uppercase tracking-wider font-semibold backdrop-blur-sm">
+                Ampliar Registro
+              </span>
+            </div>
+            <div class="absolute bottom-4 left-4 right-4 bg-[#FFFCF9]/90 backdrop-blur-sm p-4 rounded-xl border border-[#B69A60]/20">
+              <span class="text-[10px] uppercase tracking-wider text-[#B69A60] font-semibold">Evolução Autorizada</span>
+              <p class="font-serif-editorial text-lg text-[#292625]">Acompanhamento de protocolo redutor de flancos</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Foto 4: Acompanhamento Corporal 2 (6 colunas) -->
+        <div class="md:col-span-6 group cursor-pointer" onclick="openLightbox('./public/images/resultado-corporal-2.png', 'Evolução de modelagem abdominal e lombar — Imagem autorizada')">
+          <div class="relative h-[380px] rounded-2xl overflow-hidden border border-[#B69A60]/20 shadow-md bg-[#FFFCF9]">
+            <img 
+              src="./public/images/resultado-corporal-2.png" 
+              alt="Acompanhamento abdominal comparativo" 
+              class="w-full h-full object-contain p-2 bg-[#FFFCF9] group-hover:scale-105 transition-luxury duration-700"
+              loading="lazy"
+            >
+            <div class="absolute inset-0 bg-[#292625]/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+              <span class="px-5 py-2.5 rounded-full bg-[#FFFCF9]/90 text-[#292625] text-xs font-sans-editorial uppercase tracking-wider font-semibold backdrop-blur-sm">
+                Ampliar Registro
+              </span>
+            </div>
+            <div class="absolute bottom-4 left-4 right-4 bg-[#FFFCF9]/90 backdrop-blur-sm p-4 rounded-xl border border-[#B69A60]/20">
+              <span class="text-[10px] uppercase tracking-wider text-[#B69A60] font-semibold">Registro Clínico Documentado</span>
+              <p class="font-serif-editorial text-lg text-[#292625]">Harmonização e firmeza dérmica da região abdominal</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Aviso Legal Obrigatório sobre Resultados -->
+      <div class="mt-12 p-6 rounded-2xl bg-[#FFFCF9] border border-[#B69A60]/20 max-w-4xl mx-auto flex items-start gap-4">
+        <div class="w-8 h-8 rounded-full bg-[#EAD7D3]/40 flex-shrink-0 flex items-center justify-center text-[#B69A60]">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+          </svg>
+        </div>
+        <div class="text-xs text-[#645F5D] leading-relaxed">
+          <strong class="text-[#292625] font-semibold">Aviso Ético e Legal:</strong> As imagens acima correspondem a registros documentais de casos acompanhados com autorização de imagem. Resultados estéticos são multifatoriais e variam segundo a resposta biológica, metabolismo e disciplina de cada organismo. A clínica não promete resultados idênticos ou garantias matemáticas.
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- SEÇÃO H: EXPERIÊNCIA DE ATENDIMENTO EM 3 ETAPAS -->
+  <section id="experiencia" class="py-28 px-6 md:px-12 bg-[#FFFCF9] relative border-t border-[#B69A60]/10">
+    <div class="max-w-7xl mx-auto">
+      
+      <div class="text-center max-w-3xl mx-auto mb-20">
+        <div class="inline-flex items-center gap-3 mb-4 justify-center">
+          <span class="w-8 h-[1px] bg-[#B69A60]"></span>
+          <span class="text-xs uppercase tracking-[0.25em] font-sans-editorial font-semibold text-[#B69A60]">JORNADA DE CUIDADO</span>
+          <span class="w-8 h-[1px] bg-[#B69A60]"></span>
+        </div>
+        <h2 class="font-serif-editorial text-3xl sm:text-4xl md:text-5xl font-light text-[#292625] leading-tight mb-6">
+          Uma experiência desenhada do início ao fim.
+        </h2>
+        <p class="text-base text-[#645F5D] font-light max-w-2xl mx-auto">
+          Nosso fluxo de atendimento foi concebido para proporcionar tranquilidade, pontualidade e total transparência.
+        </p>
+      </div>
+
+      <!-- Grid com as 3 Etapas Estruturadas -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 relative">
+        
+        <!-- Linha conectora em desktops -->
+        <div class="hidden md:block absolute top-1/3 left-1/6 right-1/6 h-[1px] bg-gradient-to-r from-transparent via-[#B69A60]/30 to-transparent pointer-events-none"></div>
+
+        <!-- Etapa 1 -->
+        <div class="p-8 rounded-2xl bg-[#FAF7F3] border border-[#B69A60]/15 relative hover:shadow-lg transition-luxury flex flex-col justify-between">
+          <div>
+            <div class="w-14 h-14 rounded-full bg-[#FFFCF9] border border-[#B69A60]/40 flex items-center justify-center font-serif-editorial text-2xl font-semibold text-[#B69A60] mb-6 shadow-sm">
+              01
+            </div>
+            <h3 class="font-serif-editorial text-2xl font-medium text-[#292625] mb-3">Entre em Contato</h3>
+            <p class="text-sm text-[#645F5D] font-light leading-relaxed">
+              Inicie a sua conversa com a clínica através do nosso Instagram oficial ou via WhatsApp (assim que disponibilizado) para apresentar o seu interesse.
+            </p>
+          </div>
+          <div class="mt-6 pt-4 border-t border-[#B69A60]/10 text-xs font-sans-editorial uppercase tracking-wider text-[#B69A60] font-semibold">
+            Primeiro Passo
+          </div>
+        </div>
+
+        <!-- Etapa 2 -->
+        <div class="p-8 rounded-2xl bg-[#FAF7F3] border border-[#B69A60]/15 relative hover:shadow-lg transition-luxury flex flex-col justify-between">
+          <div>
+            <div class="w-14 h-14 rounded-full bg-[#FFFCF9] border border-[#B69A60]/40 flex items-center justify-center font-serif-editorial text-2xl font-semibold text-[#B69A60] mb-6 shadow-sm">
+              02
+            </div>
+            <h3 class="font-serif-editorial text-2xl font-medium text-[#292625] mb-3">Converse com a Equipe</h3>
+            <p class="text-sm text-[#645F5D] font-light leading-relaxed">
+              Esclareça todas as suas dúvidas sobre indicações, preparo para procedimentos e protocolos recomendados para o seu perfil e momento de vida.
+            </p>
+          </div>
+          <div class="mt-6 pt-4 border-t border-[#B69A60]/10 text-xs font-sans-editorial uppercase tracking-wider text-[#B69A60] font-semibold">
+            Diálogo Transparente
+          </div>
+        </div>
+
+        <!-- Etapa 3 -->
+        <div class="p-8 rounded-2xl bg-[#FAF7F3] border border-[#B69A60]/15 relative hover:shadow-lg transition-luxury flex flex-col justify-between">
+          <div>
+            <div class="w-14 h-14 rounded-full bg-[#FFFCF9] border border-[#B69A60]/40 flex items-center justify-center font-serif-editorial text-2xl font-semibold text-[#B69A60] mb-6 shadow-sm">
+              03
+            </div>
+            <h3 class="font-serif-editorial text-2xl font-medium text-[#292625] mb-3">Agende sua Avaliação</h3>
+            <p class="text-sm text-[#645F5D] font-light leading-relaxed">
+              Consulte a disponibilidade de agenda, escolha o melhor horário e desfrute de um atendimento privativo, pontual e altamente personalizado.
+            </p>
+          </div>
+          <div class="mt-6 pt-4 border-t border-[#B69A60]/10 text-xs font-sans-editorial uppercase tracking-wider text-[#B69A60] font-semibold">
+            Momento Exclusivo
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- SEÇÃO I: PERGUNTAS FREQUENTES (ACCORDION ACESSÍVEL) -->
+  <section id="faq" class="py-28 px-6 md:px-12 bg-[#FAF7F3] relative border-t border-[#B69A60]/10">
+    <div class="max-w-4xl mx-auto">
+      
+      <div class="text-center mb-16">
+        <div class="inline-flex items-center gap-3 mb-4 justify-center">
+          <span class="w-8 h-[1px] bg-[#B69A60]"></span>
+          <span class="text-xs uppercase tracking-[0.25em] font-sans-editorial font-semibold text-[#B69A60]">ESCLARECIMENTO</span>
+          <span class="w-8 h-[1px] bg-[#B69A60]"></span>
+        </div>
+        <h2 class="font-serif-editorial text-3xl sm:text-4xl md:text-5xl font-light text-[#292625] leading-tight mb-4">
+          Dúvidas Frequentes
+        </h2>
+        <p class="text-sm sm:text-base text-[#645F5D] font-light">
+          Informações essenciais para orientar sua experiência na clínica.
+        </p>
+      </div>
+
+      <!-- Componente Accordion -->
+      <div class="space-y-4" id="faq-accordion">
+        
+        <!-- Pergunta 1 -->
+        <div class="bg-[#FFFCF9] rounded-2xl border border-[#B69A60]/20 overflow-hidden transition-luxury">
+          <button class="w-full p-6 text-left flex items-center justify-between gap-4 focus:outline-none cursor-pointer" onclick="toggleFaq(this)" aria-expanded="false">
+            <span class="font-serif-editorial text-xl font-medium text-[#292625]">Como agendar uma avaliação inicial na clínica?</span>
+            <span class="w-8 h-8 rounded-full border border-[#B69A60]/30 flex items-center justify-center flex-shrink-0 text-[#B69A60] transition-transform">
+              <svg class="w-4 h-4 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+              </svg>
+            </span>
+          </button>
+          <div class="faq-content hidden px-6 pb-6 text-sm text-[#645F5D] font-light leading-relaxed border-t border-[#B69A60]/10 pt-4">
+            Você pode acompanhar as novidades e a abertura de novos horários diretamente pelo Instagram oficial (<a href="https://www.instagram.com/gs_esteticaavancadaa/" target="_blank" rel="noopener noreferrer" class="text-[#B69A60] underline">@gs_esteticaavancadaa</a>). Em breve, disponibilizaremos o canal direto de WhatsApp para agendamentos imediatos.
+          </div>
+        </div>
+
+        <!-- Pergunta 2 -->
+        <div class="bg-[#FFFCF9] rounded-2xl border border-[#B69A60]/20 overflow-hidden transition-luxury">
+          <button class="w-full p-6 text-left flex items-center justify-between gap-4 focus:outline-none cursor-pointer" onclick="toggleFaq(this)" aria-expanded="false">
+            <span class="font-serif-editorial text-xl font-medium text-[#292625]">Quais tratamentos estão disponíveis?</span>
+            <span class="w-8 h-8 rounded-full border border-[#B69A60]/30 flex items-center justify-center flex-shrink-0 text-[#B69A60] transition-transform">
+              <svg class="w-4 h-4 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+              </svg>
+            </span>
+          </button>
+          <div class="faq-content hidden px-6 pb-6 text-sm text-[#645F5D] font-light leading-relaxed border-t border-[#B69A60]/10 pt-4">
+            Oferecemos depilação a laser com ponteira resfriada, protocolos faciais e skincare para revitalização, criolipólise avançada, drenagens desintoxicantes (detox) e programas integrados de contorno corporal.
+          </div>
+        </div>
+
+        <!-- Pergunta 3 -->
+        <div class="bg-[#FFFCF9] rounded-2xl border border-[#B69A60]/20 overflow-hidden transition-luxury">
+          <button class="w-full p-6 text-left flex items-center justify-between gap-4 focus:outline-none cursor-pointer" onclick="toggleFaq(this)" aria-expanded="false">
+            <span class="font-serif-editorial text-xl font-medium text-[#292625]">Como saber qual tratamento é adequado para mim?</span>
+            <span class="w-8 h-8 rounded-full border border-[#B69A60]/30 flex items-center justify-center flex-shrink-0 text-[#B69A60] transition-transform">
+              <svg class="w-4 h-4 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+              </svg>
+            </span>
+          </button>
+          <div class="faq-content hidden px-6 pb-6 text-sm text-[#645F5D] font-light leading-relaxed border-t border-[#B69A60]/10 pt-4">
+            A indicação exata de qualquer procedimento só deve ser feita mediante avaliação presencial e anamnese detalhada por Gabrielly Sampaio. Dúvidas sobre contraindicações específicas e expectativas clínicas são discutidas individualmente com total segurança.
+          </div>
+        </div>
+
+        <!-- Pergunta 4 -->
+        <div class="bg-[#FFFCF9] rounded-2xl border border-[#B69A60]/20 overflow-hidden transition-luxury">
+          <button class="w-full p-6 text-left flex items-center justify-between gap-4 focus:outline-none cursor-pointer" onclick="toggleFaq(this)" aria-expanded="false">
+            <span class="font-serif-editorial text-xl font-medium text-[#292625]">Onde fica a clínica e qual o horário de funcionamento?</span>
+            <span class="w-8 h-8 rounded-full border border-[#B69A60]/30 flex items-center justify-center flex-shrink-0 text-[#B69A60] transition-transform">
+              <svg class="w-4 h-4 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+              </svg>
+            </span>
+          </button>
+          <div class="faq-content hidden px-6 pb-6 text-sm text-[#645F5D] font-light leading-relaxed border-t border-[#B69A60]/10 pt-4">
+            O endereço exato da clínica e os horários formais de atendimento estão em fase final de homologação. Todos os atendimentos são privativos e ocorrem estritamente com agendamento prévio.
+          </div>
+        </div>
+
+        <!-- Pergunta 5 -->
+        <div class="bg-[#FFFCF9] rounded-2xl border border-[#B69A60]/20 overflow-hidden transition-luxury">
+          <button class="w-full p-6 text-left flex items-center justify-between gap-4 focus:outline-none cursor-pointer" onclick="toggleFaq(this)" aria-expanded="false">
+            <span class="font-serif-editorial text-xl font-medium text-[#292625]">Como consultar valores e condições de pagamento?</span>
+            <span class="w-8 h-8 rounded-full border border-[#B69A60]/30 flex items-center justify-center flex-shrink-0 text-[#B69A60] transition-transform">
+              <svg class="w-4 h-4 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+              </svg>
+            </span>
+          </button>
+          <div class="faq-content hidden px-6 pb-6 text-sm text-[#645F5D] font-light leading-relaxed border-t border-[#B69A60]/10 pt-4">
+            Os valores são detalhados de maneira transparente após a análise das regiões a serem tratadas e definição do plano de sessões mais adequado ao seu caso.
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- SEÇÃO J: CONTATO E LOCALIZAÇÃO COM STATUS PENDENTE CONFIRMADO -->
+  <section id="contato" class="py-28 px-6 md:px-12 bg-[#FFFCF9] relative border-t border-[#B69A60]/10">
+    <div class="max-w-7xl mx-auto">
+      
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
+        
+        <!-- Bloco Informativo de Contato (7 colunas) -->
+        <div class="lg:col-span-7">
+          <div class="inline-flex items-center gap-3 mb-4">
+            <span class="w-8 h-[1px] bg-[#B69A60]"></span>
+            <span class="text-xs uppercase tracking-[0.25em] font-sans-editorial font-semibold text-[#B69A60]">CANAL INSTITUCIONAL</span>
+          </div>
+
+          <h2 class="font-serif-editorial text-3xl sm:text-4xl md:text-5xl font-light text-[#292625] leading-tight mb-6">
+            Conecte-se com a GS Estética Avançada.
+          </h2>
+
+          <p class="text-base text-[#645F5D] font-light leading-relaxed mb-10">
+            Acompanhe nossa rotina de procedimentos e novidades em tempo real através do canal oficial no Instagram. Nossos canais diretos de WhatsApp e endereço formal serão publicados nesta seção assim que validados.
+          </p>
+
+          <div class="space-y-6">
+            
+            <!-- Instagram Ativo -->
+            <div class="p-6 rounded-2xl bg-[#FAF7F3] border border-[#B69A60]/20 flex items-center justify-between flex-wrap gap-4">
+              <div class="flex items-center gap-4">
+                <div class="w-12 h-12 rounded-full bg-[#FFFCF9] border border-[#B69A60]/30 flex items-center justify-center text-[#292625]">
+                  <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                  </svg>
+                </div>
+                <div>
+                  <span class="text-[10px] uppercase tracking-wider text-[#B69A60] font-semibold">Perfil Oficial</span>
+                  <p class="font-serif-editorial text-lg text-[#292625]">@gs_esteticaavancadaa</p>
+                </div>
+              </div>
+              <a href="https://www.instagram.com/gs_esteticaavancadaa/" target="_blank" rel="noopener noreferrer" class="px-5 py-2.5 rounded-full border border-[#B69A60] text-xs font-sans-editorial uppercase tracking-wider font-semibold text-[#292625] hover:bg-[#B69A60] hover:text-[#FAF7F3] transition-luxury">
+                Acessar Instagram
+              </a>
+            </div>
+
+            <!-- WhatsApp (Marcado com Status Pendente de Confirmação) -->
+            <div class="p-6 rounded-2xl bg-[#FAF7F3] border border-[#B69A60]/15 flex items-center justify-between flex-wrap gap-4">
+              <div class="flex items-center gap-4">
+                <div class="w-12 h-12 rounded-full bg-[#EAD7D3]/40 border border-[#B69A60]/20 flex items-center justify-center text-[#645F5D]">
+                  <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
+                  </svg>
+                </div>
+                <div>
+                  <span class="inline-flex items-center gap-2 text-[10px] uppercase tracking-wider text-[#645F5D] font-semibold">
+                    <span>Atendimento WhatsApp</span>
+                    <span class="px-2 py-0.5 rounded-full bg-[#EAD7D3] text-[#292625] text-[9px]">Em Confirmação</span>
+                  </span>
+                  <p class="font-serif-editorial text-lg text-[#292625]/60 italic">Número oficial a ser disponibilizado em breve</p>
+                </div>
+              </div>
+              <button disabled class="px-5 py-2.5 rounded-full border border-gray-300 text-xs font-sans-editorial uppercase tracking-wider font-semibold text-gray-400 bg-gray-100 cursor-not-allowed">
+                Indisponível no Momento
+              </button>
+            </div>
+
+            <!-- Endereço e Localização (Pendente de Confirmação) -->
+            <div class="p-6 rounded-2xl bg-[#FAF7F3] border border-[#B69A60]/15 flex items-start gap-4">
+              <div class="w-12 h-12 rounded-full bg-[#EAD7D3]/40 border border-[#B69A60]/20 flex items-center justify-center text-[#645F5D] flex-shrink-0">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
+                </svg>
+              </div>
+              <div>
+                <span class="inline-flex items-center gap-2 text-[10px] uppercase tracking-wider text-[#645F5D] font-semibold">
+                  <span>Espaço Físico</span>
+                  <span class="px-2 py-0.5 rounded-full bg-[#EAD7D3] text-[#292625] text-[9px]">Pendente de Confirmação</span>
+                </span>
+                <p class="font-serif-editorial text-lg text-[#292625] mt-1">Endereço e mapa oficial sob validação da clínica</p>
+                <p class="text-xs text-[#645F5D] mt-1 font-light leading-relaxed">
+                  Para preservar a precisão das informações e respeitar o padrão de conformidade, nenhum mapa com coordenadas fictícias é apresentado. Consulte detalhes de atendimento pelo Instagram.
+                </p>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+        <!-- Card Lateral de Acolhimento e Filosofia (5 colunas) -->
+        <div class="lg:col-span-5 bg-[#FAF7F3] rounded-3xl p-8 md:p-10 border border-[#B69A60]/20 relative">
+          <div class="w-12 h-12 rounded-full bg-[#FFFCF9] border border-[#B69A60]/40 flex items-center justify-center font-serif-editorial text-xl font-semibold text-[#292625] mb-6">
+            GS
+          </div>
+
+          <h3 class="font-serif-editorial text-3xl font-light text-[#292625] mb-4">
+            Horários de Atendimento
+          </h3>
+
+          <p class="text-sm text-[#645F5D] font-light leading-relaxed mb-6">
+            Priorizamos a privacidade e o tempo de cada paciente. Não realizamos atendimentos com salas de espera cheias ou rotatividade acelerada.
+          </p>
+
+          <div class="p-4 rounded-xl bg-[#FFFCF9] border border-[#B69A60]/15 mb-8">
+            <span class="text-xs uppercase tracking-wider text-[#B69A60] font-semibold block mb-1">Modelo de Atendimento</span>
+            <p class="text-sm font-serif-editorial text-[#292625]">Estritamente com horário marcado e agendamento prévio individualizado.</p>
+          </div>
+
+          <div class="pt-6 border-t border-[#B69A60]/15 flex items-center justify-between text-xs text-[#645F5D]">
+            <span>Canal Oficial de Novidades:</span>
+            <a href="https://www.instagram.com/gs_esteticaavancadaa/" target="_blank" rel="noopener noreferrer" class="text-[#292625] font-semibold hover:text-[#B69A60] transition-colors">@gs_esteticaavancadaa</a>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- SEÇÃO K: CHAMADA FINAL DE ALTO IMPACTO -->
+  <section class="py-28 px-6 md:px-12 bg-gradient-to-b from-[#FAF7F3] to-[#FFFCF9] relative overflow-hidden border-t border-[#B69A60]/15">
+    <div class="max-w-5xl mx-auto text-center relative z-10">
+      
+      <div class="inline-flex items-center gap-3 mb-6 justify-center">
+        <span class="w-8 h-[1px] bg-[#B69A60]"></span>
+        <span class="text-xs uppercase tracking-[0.3em] font-sans-editorial font-semibold text-[#B69A60]">TRANSFORME SEU MOMENTO</span>
+        <span class="w-8 h-[1px] bg-[#B69A60]"></span>
+      </div>
+
+      <h2 class="font-serif-editorial text-4xl sm:text-5xl md:text-6xl font-light text-[#292625] leading-tight mb-8">
+        Seu próximo momento de <br class="hidden sm:block">
+        <span class="italic font-normal">cuidado começa aqui.</span>
+      </h2>
+
+      <p class="text-base sm:text-lg text-[#645F5D] font-light max-w-2xl mx-auto leading-relaxed mb-12">
+        Entre em contato para conhecer os tratamentos disponíveis e consultar os horários de atendimento com a profissional Gabrielly Sampaio.
+      </p>
+
+      <div class="flex flex-col sm:flex-row items-center justify-center gap-5">
+        <button onclick="openContactModal()" class="w-full sm:w-auto px-10 py-4 rounded-full text-xs font-sans-editorial uppercase tracking-widest font-semibold bg-[#292625] text-[#FFFCF9] hover:bg-[#B69A60] transition-luxury shadow-xl shadow-[#292625]/10 flex items-center justify-center gap-3 cursor-pointer">
+          <span>Falar com a Clínica</span>
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
+          </svg>
+        </button>
+
+        <a href="https://www.instagram.com/gs_esteticaavancadaa/" target="_blank" rel="noopener noreferrer" class="w-full sm:w-auto px-8 py-4 rounded-full text-xs font-sans-editorial uppercase tracking-widest font-semibold border border-[#B69A60]/50 text-[#292625] hover:border-[#B69A60] hover:bg-[#FAF7F3] transition-luxury text-center">
+          Ver Instagram @gs_esteticaavancadaa
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- SEÇÃO L: RODAPÉ EDITORIAL -->
+  <footer class="bg-[#292625] text-[#FAF7F3] py-20 px-6 md:px-12 border-t border-[#B69A60]/30">
+    <div class="max-w-7xl mx-auto">
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-12 pb-16 border-b border-white/10">
+        
+        <!-- Identidade Visual GS (5 colunas) -->
+        <div class="lg:col-span-5">
+          <div class="flex items-center gap-3 mb-6">
+            <div class="w-10 h-10 rounded-full border border-[#B69A60] flex items-center justify-center bg-white/5">
+              <span class="font-serif-editorial text-lg font-semibold text-[#B69A60]">GS</span>
+            </div>
+            <span class="font-serif-editorial text-2xl font-light tracking-wide text-[#FAF7F3]">GS Estética Avançada</span>
+          </div>
+
+          <p class="text-xs text-[#FAF7F3]/70 font-light leading-relaxed max-w-sm mb-6">
+            Cuidado que valoriza a sua beleza com naturalidade, protocolos individualizados e alta tecnologia sob a condução de Gabrielly Sampaio.
+          </p>
+
+          <div class="flex items-center gap-4 text-xs text-[#B69A60]">
+            <a href="https://www.instagram.com/gs_esteticaavancadaa/" target="_blank" rel="noopener noreferrer" class="hover:text-[#FAF7F3] transition-colors flex items-center gap-2">
+              <span>Instagram Oficial</span>
+              <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Links Rápidos (3 colunas) -->
+        <div class="lg:col-span-3">
+          <span class="text-[11px] uppercase tracking-widest text-[#B69A60] font-semibold block mb-4">Navegação</span>
+          <ul class="space-y-2.5 text-xs text-[#FAF7F3]/70 font-light">
+            <li><a href="#hero" class="hover:text-[#B69A60] transition-colors">Início</a></li>
+            <li><a href="#sobre" class="hover:text-[#B69A60] transition-colors">Sobre Gabrielly Sampaio</a></li>
+            <li><a href="#tratamentos" class="hover:text-[#B69A60] transition-colors">Tratamentos Especializados</a></li>
+            <li><a href="#tecnologia" class="hover:text-[#B69A60] transition-colors">Tecnologia &amp; Rigor</a></li>
+            <li><a href="#galeria" class="hover:text-[#B69A60] transition-colors">Galeria e Acompanhamentos</a></li>
+            <li><a href="#faq" class="hover:text-[#B69A60] transition-colors">Perguntas Frequentes</a></li>
+          </ul>
+        </div>
+
+        <!-- Status Institucional (4 colunas) -->
+        <div class="lg:col-span-4">
+          <span class="text-[11px] uppercase tracking-widest text-[#B69A60] font-semibold block mb-4">Informações Legais &amp; Contato</span>
+          <div class="space-y-3 text-xs text-[#FAF7F3]/70 font-light">
+            <p><strong class="text-[#FAF7F3] font-normal">WhatsApp Oficial:</strong> Pendente de confirmação</p>
+            <p><strong class="text-[#FAF7F3] font-normal">Localização:</strong> Sob validação cadastral</p>
+            <p><strong class="text-[#FAF7F3] font-normal">Atendimento:</strong> Privativo com agendamento prévio</p>
+            <p class="text-[11px] text-[#FAF7F3]/50 mt-4 leading-normal">
+              Para alterações cadastrais ou dados técnicos de equipamentos, edite o arquivo central <code class="text-[#B69A60]">/src/config/business.ts</code>.
+            </p>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Copyright e Atualização Dinâmica de Ano -->
+      <div class="pt-8 flex flex-col sm:flex-row items-center justify-between text-[11px] text-[#FAF7F3]/50 font-light gap-4">
+        <div>
+          &copy; <span id="current-year"></span> GS Estética Avançada &bull; Gabrielly Sampaio. Todos os direitos reservados.
+        </div>
+        <div class="flex items-center gap-6">
+          <span class="hover:text-[#FAF7F3] transition-colors cursor-pointer" onclick="openLegalModal('Privacidade &amp; Tratamento de Dados', 'Em respeito à Lei Geral de Proteção de Dados (LGPD - Lei nº 13.709/2018), todos os dados coletados durante anamneses clínicas são confidenciais e armazenados com sigilo estrito.')">Política de Privacidade</span>
+          <span class="hover:text-[#FAF7F3] transition-colors cursor-pointer" onclick="openLegalModal('Termos de Uso', 'Este site tem caráter institucional informativo sobre os serviços de estética avançada prestados por Gabrielly Sampaio. Os conteúdos não substituem consulta presencial.')">Termos de Uso</span>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- MODAL DE CONTATO / STATUS PENDENTE -->
+  <div id="contact-modal" class="fixed inset-0 z-50 hidden bg-[#292625]/80 backdrop-blur-sm flex items-center justify-center p-4">
+    <div class="bg-[#FFFCF9] rounded-3xl max-w-lg w-full p-8 border border-[#B69A60]/30 shadow-2xl relative animate-fadeIn" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+      <button onclick="closeContactModal()" class="absolute top-6 right-6 text-[#292625]/60 hover:text-[#292625] p-2" aria-label="Fechar Modal">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M6 18L18 6M6 6l12 12"/></svg>
+      </button>
+
+      <div class="w-12 h-12 rounded-full bg-[#FAF7F3] border border-[#B69A60]/40 flex items-center justify-center font-serif-editorial text-xl font-semibold text-[#B69A60] mb-6">
+        GS
+      </div>
+
+      <h3 id="modal-title" class="font-serif-editorial text-2xl font-medium text-[#292625] mb-2">Agendamento de Atendimento</h3>
+      <p class="text-xs uppercase tracking-wider text-[#B69A60] font-semibold mb-6">Gabrielly Sampaio &bull; GS Estética Avançada</p>
+
+      <div class="p-5 rounded-2xl bg-[#FAF7F3] border border-[#B69A60]/20 mb-6">
+        <div class="flex items-center gap-3 text-[#292625] font-medium text-sm mb-2">
+          <svg class="w-5 h-5 text-[#B69A60]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+          <span>Canal de WhatsApp em fase de confirmação</span>
+        </div>
+        <p class="text-xs text-[#645F5D] leading-relaxed">
+          O número oficial de WhatsApp da clínica ainda não foi cadastrado no arquivo de configuração do projeto. Para agendar ou tirar dúvidas agora mesmo, você pode nos contatar diretamente pelo Instagram:
+        </p>
+      </div>
+
+      <div class="space-y-3">
+        <a href="https://www.instagram.com/gs_esteticaavancadaa/" target="_blank" rel="noopener noreferrer" class="w-full py-3.5 rounded-full text-center text-xs font-sans-editorial uppercase tracking-widest font-semibold bg-[#292625] text-[#FFFCF9] hover:bg-[#B69A60] transition-luxury block">
+          Ir para @gs_esteticaavancadaa
+        </a>
+        <button onclick="closeContactModal()" class="w-full py-3 rounded-full text-center text-xs font-sans-editorial uppercase tracking-wider text-[#645F5D] hover:text-[#292625] transition-colors">
+          Fechar Janela
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- MODAL DE DETALHES DO TRATAMENTO -->
+  <div id="treatment-modal" class="fixed inset-0 z-50 hidden bg-[#292625]/80 backdrop-blur-sm flex items-center justify-center p-4">
+    <div class="bg-[#FFFCF9] rounded-3xl max-w-lg w-full p-8 border border-[#B69A60]/30 shadow-2xl relative" role="dialog" aria-modal="true">
+      <button onclick="closeTreatmentModal()" class="absolute top-6 right-6 text-[#292625]/60 hover:text-[#292625] p-2" aria-label="Fechar Modal">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M6 18L18 6M6 6l12 12"/></svg>
+      </button>
+
+      <span class="text-[10px] uppercase tracking-widest text-[#B69A60] font-semibold block mb-2">Protocolo Clínico</span>
+      <h3 id="treatment-modal-title" class="font-serif-editorial text-3xl font-medium text-[#292625] mb-4">Tratamento</h3>
+      
+      <p id="treatment-modal-desc" class="text-sm text-[#645F5D] font-light leading-relaxed mb-6">
+        Descrição do tratamento...
+      </p>
+
+      <div class="p-4 rounded-xl bg-[#FAF7F3] border border-[#B69A60]/15 mb-6 text-xs text-[#292625]/80 leading-relaxed">
+        <strong>Atenção:</strong> Os detalhes técnicos e valores finais são formalizados exclusivamente durante a avaliação prévia com Gabrielly Sampaio.
+      </div>
+
+      <div class="flex items-center gap-4">
+        <button onclick="closeTreatmentModal(); openContactModal();" class="flex-1 py-3.5 rounded-full text-center text-xs font-sans-editorial uppercase tracking-widest font-semibold bg-[#292625] text-[#FFFCF9] hover:bg-[#B69A60] transition-luxury cursor-pointer">
+          Consultar Disponibilidade
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- LIGHTBOX PARA A GALERIA VISUAL -->
+  <div id="lightbox-modal" class="fixed inset-0 z-50 hidden bg-[#292625]/95 backdrop-blur-md flex items-center justify-center p-4" onclick="closeLightbox(event)">
+    <div class="max-w-4xl w-full flex flex-col items-center relative" onclick="event.stopPropagation()">
+      <button onclick="closeLightboxModal()" class="absolute -top-12 right-0 text-white hover:text-[#B69A60] p-2 focus:outline-none" aria-label="Fechar Lightbox">
+        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+      </button>
+
+      <div class="rounded-2xl overflow-hidden bg-black/40 border border-white/10 max-h-[75vh] flex items-center justify-center">
+        <img id="lightbox-img" src="" alt="Imagem Ampliada" class="max-h-[75vh] w-auto object-contain">
+      </div>
+
+      <p id="lightbox-caption" class="text-sm font-light text-[#FAF7F3] mt-4 text-center max-w-2xl px-4"></p>
+    </div>
+  </div>
+
+  <!-- MODAL LEGAL / PRIVACIDADE -->
+  <div id="legal-modal" class="fixed inset-0 z-50 hidden bg-[#292625]/80 backdrop-blur-sm flex items-center justify-center p-4">
+    <div class="bg-[#FFFCF9] rounded-3xl max-w-lg w-full p-8 border border-[#B69A60]/30 shadow-2xl relative" role="dialog" aria-modal="true">
+      <button onclick="closeLegalModal()" class="absolute top-6 right-6 text-[#292625]/60 hover:text-[#292625] p-2" aria-label="Fechar Modal">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M6 18L18 6M6 6l12 12"/></svg>
+      </button>
+
+      <h3 id="legal-modal-title" class="font-serif-editorial text-2xl font-medium text-[#292625] mb-4">Informação Legal</h3>
+      <p id="legal-modal-content" class="text-sm text-[#645F5D] font-light leading-relaxed mb-6"></p>
+
+      <button onclick="closeLegalModal()" class="w-full py-3 rounded-full text-center text-xs font-sans-editorial uppercase tracking-wider bg-[#292625] text-white hover:bg-[#B69A60] transition-colors">
+        Compreendido
+      </button>
+    </div>
+  </div>
+
+  <!-- SCRIPT DE INTERAÇÕES E COMPORTAMENTOS EDITORAIS -->
+  <script>
+    // Atualização automática de ano no copyright
+    document.getElementById('current-year').textContent = new Date().getFullYear();
+
+    // Menu Mobile Toggle
+    const mobileToggle = document.getElementById('mobile-menu-toggle');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const hamburgerIcon = document.getElementById('hamburger-icon');
+    const closeIcon = document.getElementById('close-icon');
+
+    mobileToggle.addEventListener('click', () => {
+      const isOpen = !mobileMenu.classList.contains('hidden');
+      if (isOpen) {
+        mobileMenu.classList.add('hidden');
+        hamburgerIcon.classList.remove('hidden');
+        closeIcon.classList.add('hidden');
+      } else {
+        mobileMenu.classList.remove('hidden');
+        hamburgerIcon.classList.add('hidden');
+        closeIcon.classList.remove('hidden');
+      }
+    });
+
+    // Fechar menu mobile ao clicar em um link interno
+    document.querySelectorAll('.mobile-link').forEach(link => {
+      link.addEventListener('click', () => {
+        mobileMenu.classList.add('hidden');
+        hamburgerIcon.classList.remove('hidden');
+        closeIcon.classList.add('hidden');
+      });
+    });
+
+    // Animação de compactação sutil do Header ao rolar
+    window.addEventListener('scroll', () => {
+      const header = document.getElementById('main-header');
+      if (window.scrollY > 40) {
+        header.classList.add('py-2.5', 'shadow-sm');
+        header.classList.remove('py-4');
+      } else {
+        header.classList.add('py-4');
+        header.classList.remove('py-2.5', 'shadow-sm');
+      }
+    });
+
+    // Accordion FAQ com Acessibilidade
+    function toggleFaq(btn) {
+      const content = btn.nextElementSibling;
+      const svg = btn.querySelector('svg');
+      const isExpanded = btn.getAttribute('aria-expanded') === 'true';
+
+      // Fechar outros accordions abertos
+      document.querySelectorAll('#faq-accordion .faq-content').forEach(c => {
+        if (c !== content) {
+          c.classList.add('hidden');
+          const otherBtn = c.previousElementSibling;
+          otherBtn.setAttribute('aria-expanded', 'false');
+          const otherSvg = otherBtn.querySelector('svg');
+          if (otherSvg) otherSvg.classList.remove('rotate-180');
+        }
+      });
+
+      if (isExpanded) {
+        content.classList.add('hidden');
+        btn.setAttribute('aria-expanded', 'false');
+        svg.classList.remove('rotate-180');
+      } else {
+        content.classList.remove('hidden');
+        btn.setAttribute('aria-expanded', 'true');
+        svg.classList.add('rotate-180');
+      }
+    }
+
+    // Modal de Contato
+    function openContactModal() {
+      document.getElementById('contact-modal').classList.remove('hidden');
+      document.body.classList.add('overflow-hidden');
+    }
+    function closeContactModal() {
+      document.getElementById('contact-modal').classList.add('hidden');
+      document.body.classList.remove('overflow-hidden');
+    }
+
+    // Modal de Tratamento
+    function openTreatmentModal(title, description) {
+      document.getElementById('treatment-modal-title').textContent = title;
+      document.getElementById('treatment-modal-desc').textContent = description;
+      document.getElementById('treatment-modal').classList.remove('hidden');
+      document.body.classList.add('overflow-hidden');
+    }
+    function closeTreatmentModal() {
+      document.getElementById('treatment-modal').classList.add('hidden');
+      document.body.classList.remove('overflow-hidden');
+    }
+
+    // Lightbox da Galeria com Suporte a Teclado (ESC)
+    function openLightbox(src, caption) {
+      const modal = document.getElementById('lightbox-modal');
+      const img = document.getElementById('lightbox-img');
+      const cap = document.getElementById('lightbox-caption');
+
+      img.src = src;
+      img.alt = caption;
+      cap.textContent = caption;
+
+      modal.classList.remove('hidden');
+      document.body.classList.add('overflow-hidden');
+    }
+    function closeLightboxModal() {
+      document.getElementById('lightbox-modal').classList.add('hidden');
+      document.body.classList.remove('overflow-hidden');
+    }
+    function closeLightbox(event) {
+      closeLightboxModal();
+    }
+
+    // Modal Legal
+    function openLegalModal(title, text) {
+      document.getElementById('legal-modal-title').textContent = title;
+      document.getElementById('legal-modal-content').textContent = text;
+      document.getElementById('legal-modal').classList.remove('hidden');
+      document.body.classList.add('overflow-hidden');
+    }
+    function closeLegalModal() {
+      document.getElementById('legal-modal').classList.add('hidden');
+      document.body.classList.remove('overflow-hidden');
+    }
+
+    // Fechar modais ao pressionar tecla ESC
+    window.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') {
+        closeContactModal();
+        closeTreatmentModal();
+        closeLightboxModal();
+        closeLegalModal();
+      }
+    });
+  </script>
+
+  <!-- Tailwind via script para resolução instantânea das classes sem necessidade de build complexo -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            marfim: '#FAF7F3',
+            brancoQuente: '#FFFCF9',
+            nude: '#EAD7D3',
+            malva: '#C6AAB9',
+            dourado: '#B69A60',
+            grafite: '#292625'
+          }
+        }
+      }
+    }
+  </script>
+</body>
+</html>
